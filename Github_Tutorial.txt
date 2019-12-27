@@ -1,6 +1,61 @@
+######### Adding Project to Github using Github #########
+
+ON GITHUB:
+- Create a new repository
+- Do not initialize with README, license, or gitignore files
+
+# Navigate to the local project directory
 cd /Local_Repo
 
-git add <file>
-#Adds file to local Local_Repo
+# Initialize the local directory as a Git repository
+git init
 
-git commit -m "
+# Add the files in your local repository. Stages for first commit
+git add .
+
+# Commit staged files in the local repository
+git commit -m "First commit"
+
+ON GITHUB:
+- Copy remote repository URL
+
+# Add the URL for the remote repository where the local repository will be pushed
+git remote add origin <remote repository url>
+    # Sets the new remote URL
+git remote -v
+    # Verifies the new remote URL
+
+# Push the new changes in your local repository to Github
+git push -u origin master
+    # Pushes changes in the local repo to the remote repo specified as the origin
+
+######### Errors during Phase 1 ######### 
+# Error:
+ [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/jdrapss/Modern-Python-3-Bootcamp.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+# Solution 1:
+git pull https://github.com/*username*/*repository*.git master
+    # Pull remote repository
+git init
+git add . 
+git commit -m "update"
+    # Re-initialized local repository
+git push
+    # push changes to remote repository
+
+# Solution 2:
+# Fetching and merging changes made on the remote branch with changes made locally:
+git fetch origin
+    # Fetch updates made to an online repository
+git merge origin YOUR_BRANCH_NAME
+    # Merge updates made online with your local work
+
+# Solution 3: 
+# git pull performs both fetch and merge at once
+git pull origin YOUR_BRANCH_NAME
+    # Grabs online updates and merges them with your local work
+--------------------------------------------------------------------
