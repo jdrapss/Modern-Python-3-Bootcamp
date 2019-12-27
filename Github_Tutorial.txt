@@ -1,0 +1,6 @@
+cd /Local_Repo
+
+git add <file>
+#Adds file to local Local_Repo
+
+git commit -m "
