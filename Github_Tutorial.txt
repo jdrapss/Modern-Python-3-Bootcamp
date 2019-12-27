@@ -30,7 +30,7 @@ git push -u origin master
     # Pushes changes in the local repo to the remote repo specified as the origin
 
 ######### Errors during Phase 1 ######### 
-# Error:
+# Error: Non-fast forward error
  [rejected]        master -> master (non-fast-forward)
 error: failed to push some refs to 'https://github.com/jdrapss/Modern-Python-3-Bootcamp.git'
 hint: Updates were rejected because the tip of your current branch is behind
@@ -59,3 +59,9 @@ git merge origin YOUR_BRANCH_NAME
 git pull origin YOUR_BRANCH_NAME
     # Grabs online updates and merges them with your local work
 --------------------------------------------------------------------
+######### Adding a file to a repository using the command line ######### 
+cd /Local_Repo
+
+git add <file>
+git commit -m "Changes Made"
+git push origin YOUR_BRANCH_NAME
