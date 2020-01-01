@@ -6,7 +6,9 @@ echo "What file has been updated?"
 read varname
 
 git add $varname
-git commit -m "New Update to this section"
+
+read -p "What changes have been made?: " str1
+git commit -m  "$str1"
 git push origin master
 
 echo "Master has been fed. The beast has been suppressed for another commit."
