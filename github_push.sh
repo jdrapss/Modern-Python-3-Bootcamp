@@ -9,4 +9,4 @@ git add $varname
 git commit -m "New Update to this section"
 git push origin master
 
-echo "Your update has been pushed to the master repo"
+echo "Master has been fed. The beast has been suppressed for another commit."
